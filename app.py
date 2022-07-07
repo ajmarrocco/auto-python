@@ -10,6 +10,9 @@ print(sheet.max_row)
 
 for row in range(2, sheet.max_row + 1):
     # gets what is in each cell in the row
+    # .cell(row, column)
     cell = sheet.cell(row, 3)
-    print(cell.value)
+    corrected_price = cell.value * 0.9
+    corrected_price_cell = sheet.cell(row,4)
+    corrected_price_cell.value = corrected_price
 
